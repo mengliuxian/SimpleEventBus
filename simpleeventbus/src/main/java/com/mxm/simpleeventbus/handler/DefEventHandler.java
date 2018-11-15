@@ -13,7 +13,7 @@ import java.lang.reflect.InvocationTargetException;
 public class DefEventHandler implements IEventHandler {
     @Override
     public void handlerEvnt(Subscription subscription, Object event) {
-        if (subscription == null || subscription.subscriber.get() != null) {
+        if (subscription == null || subscription.subscriber.get() == null) {
             return;
         }
         try {

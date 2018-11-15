@@ -7,7 +7,7 @@ import java.lang.reflect.Method;
 
 /**
  * <p>
- * 订阅者对象,包含订阅者和目标方法
+ * 订阅者对�?包含订阅者和目标方法
  * <p>
  * Created by Administrator on 2018/10/17.
  */
@@ -15,7 +15,7 @@ import java.lang.reflect.Method;
 public class Subscription {
 
     /**
-     * 订阅者对象
+     * 订阅者对�?
      */
     public WeakReference<Object> subscriber;
 
@@ -25,7 +25,7 @@ public class Subscription {
     public Method targetMethod;
 
     /**
-     * 实现执行的线程模式
+     * 实现执行的线程模�?
      */
     public ThreadMode threadMode;
 
@@ -36,7 +36,7 @@ public class Subscription {
 
 
     public Subscription(Object subscriber, SubscribeMode subscribeMode) {
-        this.subscriber = new WeakReference<Object>(subscribeMode);
+        this.subscriber = new WeakReference<Object>(subscriber);
         this.targetMethod = subscribeMode.method;
         this.threadMode = subscribeMode.threadMode;
         this.eventType = subscribeMode.eventType;
